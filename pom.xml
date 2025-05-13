@@ -80,6 +80,7 @@
 <!--		Зависимости для логгирования-->
     </dependencies>
 
+
 	<build>
 		<plugins>
 			<plugin>
