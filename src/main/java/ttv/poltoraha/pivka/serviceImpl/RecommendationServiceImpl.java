@@ -98,7 +98,7 @@ public class RecommendationServiceImpl implements RecommendationService {
      */
     @Override
     public List<Quote> recommendQuoteByBook(Integer book_id) {
-        if (bookRepository.existsById(book_id)) {
+        if (!bookRepository.existsById(book_id)) {
             throw new EntityNotFoundException(String.format("Entity book with id = %s was not found", book_id));
         }
 
@@ -107,12 +107,12 @@ public class RecommendationServiceImpl implements RecommendationService {
         val topReader = readings.stream()
                 .map(Reading::getReader)
                 .sorted(Comparator.comparingInt(reader -> reader.getReadings().size()))
-                .limit(5)
                 .toList();
 
         return topReader.stream()
                 .flatMap(reader -> reader.getQuotes().stream())
                 .filter(quote -> Objects.equals(quote.getBook().getId(), book_id))
+                .limit(5)
                 .toList();
     }
 }
