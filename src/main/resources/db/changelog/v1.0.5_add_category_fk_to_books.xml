@@ -1,0 +1,18 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--JUNIOR-разработчик. Чел, которому нужен другой чел и опора, чтобы он решал задачки.-->
+    <!--MIDDLE-разработчик. Чел, которому не нужен другой чел. Он может самостоятельно решить задачки.-->
+    <!--SENIOR-разработчик. Чел, которому не нужен другой чел. Чел, который может самостоятельно решить задачки. Чел, который решает задачки самым эффективным способом.-->
+    <changeSet id="add-category-fk-to-book" author="LinXan">
+
+        <addColumn tableName="book">
+            <column name="category_id" type="INT"> <constraints nullable="true"/> </column>
+        </addColumn>
+
+        <addForeignKeyConstraint baseTableName="book" baseColumnNames="category_id" constraintName="fk_book_category" referencedTableName="categories" referencedColumnNames="id"/>
+
+    </changeSet>
+
+</databaseChangeLog>

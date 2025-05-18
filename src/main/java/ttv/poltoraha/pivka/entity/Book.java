@@ -38,4 +38,8 @@ public class Book {
         return new HashSet<>(Arrays.asList(tagArray));
     }
 
+    @ManyToOne
+    @JoinColumn(name = "category_id", nullable = true)
+    private Categories category;
+
 }
