@@ -12,9 +12,10 @@ import java.util.List;
 // Репозиторий - это интерфейс, позволяющий нам писать изолированные от sql логики запросы в БД
 @Repository
 public interface AuthorRepository extends CrudRepository<Author, Integer> {
-//    "SELECT * FROM AUTHOR WHERE author.avgRaiting= " + avgRaiting " ;"
+    //    "SELECT * FROM AUTHOR WHERE author.avgRaiting= " + avgRaiting " ;"
     public List<Author> findAllByAvgRating(Double avgRating);
 
+    List<Author> findAll();
     @Query("SELECT DISTINCT a FROM author a JOIN a.books b WHERE b.tags LIKE %:tag% ORDER BY a.avgRating DESC, a.id ASC")
     List<Author> findTopAuthorsByTag(@Param("tag") String tag, Pageable pageable);
 

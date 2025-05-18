@@ -1,8 +1,12 @@
 package ttv.poltoraha.pivka.app.model;
 
+import ttv.poltoraha.pivka.dao.request.AuthorDto;
 import ttv.poltoraha.pivka.dao.request.ReviewRequestDto;
 import ttv.poltoraha.pivka.entity.Book;
 import ttv.poltoraha.pivka.entity.Review;
+
+import java.util.Collections;
+import java.util.List;
 
 import static ttv.poltoraha.pivka.app.util.TestConst.REVIEW_TEXT;
 import static ttv.poltoraha.pivka.app.util.TestConst.USERNAME;
@@ -31,5 +35,11 @@ public class Models {
                 .text(REVIEW_TEXT)
                 .book(book)
                 .build();
+    }
+    public static AuthorDto getAuthorDto(){
+return AuthorDto.builder()
+        .fullName(USERNAME)
+        .books(Collections.emptyList())
+        .build();
     }
 }
