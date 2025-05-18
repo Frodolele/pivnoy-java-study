@@ -9,6 +9,7 @@ import ttv.poltoraha.pivka.entity.Quote;
 import ttv.poltoraha.pivka.entity.Reader;
 import ttv.poltoraha.pivka.entity.Reading;
 import ttv.poltoraha.pivka.repository.BookRepository;
+import ttv.poltoraha.pivka.repository.QuoteRepository;
 import ttv.poltoraha.pivka.repository.ReaderRepository;
 import ttv.poltoraha.pivka.service.ReaderService;
 import util.MyUtility;
@@ -19,6 +20,9 @@ import util.MyUtility;
 public class ReaderServiceImpl implements ReaderService {
     private final ReaderRepository readerRepository;
     private final BookRepository bookRepository;
+
+    private final QuoteRepository quoteRepository;
+
     @Override
     public void createQuote(String username, Integer book_id, String text) {
         val newQuote = new Quote();
@@ -30,10 +34,21 @@ public class ReaderServiceImpl implements ReaderService {
         newQuote.setText(text);
         newQuote.setReader(reader);
 
-        reader.getQuotes().add(newQuote);
+        // теперь связь между читателем и новой цитатой не нужна
+        // - reader.getQuotes().add(newQuote);
 
         // todo потенциально лучше сейвить quoteRepository. Чем меньше вложенностей у сохраняемой сущности - тем эффективнее это будет происходить.
-        readerRepository.save(reader);
+        // можно не каскадно сохранять цитату через читателя, а на прямую
+        // - readerRepository.save(reader);
+        quoteRepository.save(newQuote);
+
+        /*
+        * Раньше сохранялась цитата вместе с читателем (читатель каскадно подтягивал цитату)
+        * Теперь цитата сохраняется на прямую
+        * Плюсы (Наверное, хз, ?, не знаю что я тут намутил):
+        * + данной реализации в том, что теперь мы контролируем, что сохраняем именно цитату.
+        * До этого было непонятно что читатель подтянет вместе с цитатой(если не смотреть на название метода)
+        */
     }
 
     @Override
