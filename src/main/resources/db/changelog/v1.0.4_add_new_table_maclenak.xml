@@ -1,0 +1,31 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--JUNIOR-разработчик. Чел, которому нужен другой чел и опора, чтобы он решал задачки.-->
+    <!--MIDDLE-разработчик. Чел, которому не нужен другой чел. Он может самостоятельно решить задачки.-->
+    <!--SENIOR-разработчик. Чел, которому не нужен другой чел. Чел, который может самостоятельно решить задачки. Чел, который решает задачки самым эффективным способом.-->
+    <!--MOB-разработчик. Чел, который любит яндекс и смог влиться в их дружный коллектив.-->
+    <!--LOX-разработчик. Чел, который не любит яндекс и не смог влиться в их дружный коллектив.-->
+    <changeSet id="create-table-maclenak" author="tg@maclenak">
+        <createTable tableName="maclenak">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="test1" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="test2" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="test3" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="test4" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+    </changeSet>
+
+</databaseChangeLog>

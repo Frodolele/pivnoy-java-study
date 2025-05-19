@@ -14,7 +14,7 @@ import ttv.poltoraha.pivka.service.ReaderService;
 import ttv.poltoraha.pivka.service.RecommendationService;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static ttv.poltoraha.pivka.app.util.TestConst.*;
+import static ttv.poltoraha.pivka.app.util.TestConst.USERNAME;
 
 @SpringBootTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.ANY) // Используйте H2 вместо реальной БД

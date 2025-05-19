@@ -15,8 +15,12 @@ import ttv.poltoraha.pivka.repository.BookRepository;
 import ttv.poltoraha.pivka.repository.ReviewRepository;
 import ttv.poltoraha.pivka.serviceImpl.ReviewServiceImpl;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static ttv.poltoraha.pivka.app.model.Models.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static ttv.poltoraha.pivka.app.model.Models.getReview;
+import static ttv.poltoraha.pivka.app.model.Models.getReviewRequestDto;
 
 
 @SpringBootTest

@@ -5,7 +5,6 @@ import lombok.val;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ttv.poltoraha.pivka.entity.Book;
 import ttv.poltoraha.pivka.entity.Review;
 import ttv.poltoraha.pivka.repository.AuthorRepository;
 
