@@ -1,8 +1,6 @@
 package ttv.poltoraha.pivka.entity;
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.List;
 
@@ -10,6 +8,9 @@ import java.util.List;
 @Entity(name="author")
 @Data
 @ToString
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

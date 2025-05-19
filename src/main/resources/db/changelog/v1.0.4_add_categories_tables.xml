@@ -1,0 +1,21 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--JUNIOR-разработчик. Чел, которому нужен другой чел и опора, чтобы он решал задачки.-->
+    <!--MIDDLE-разработчик. Чел, которому не нужен другой чел. Он может самостоятельно решить задачки.-->
+    <!--SENIOR-разработчик. Чел, которому не нужен другой чел. Чел, который может самостоятельно решить задачки. Чел, который решает задачки самым эффективным способом.-->
+    <changeSet id="create-categories-table" author="fifonga">
+        <createTable tableName="categories">
+
+            <column name="id" type="int" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
