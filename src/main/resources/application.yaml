@@ -2,6 +2,12 @@ logging:
   level:
     org.apache.kafka: WARN  # Уровень логирования для Kafka
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: metrics,prometheus,health,info
+
 spring:
   application:
     name: app

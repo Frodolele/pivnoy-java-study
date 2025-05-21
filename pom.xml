@@ -78,6 +78,16 @@
 			<version>3.3.1</version>
 		</dependency>
 <!--		Зависимости для логгирования-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+			<version>3.3.4</version>
+		</dependency>
+		<dependency>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-registry-prometheus</artifactId>
+			<version>1.13.5</version>
+		</dependency>
     </dependencies>
 
 	<build>
@@ -96,6 +106,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>3.4.5</version>
 			</plugin>
 		</plugins>
 	</build>

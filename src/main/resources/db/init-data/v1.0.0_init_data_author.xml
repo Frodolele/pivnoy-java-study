@@ -8,52 +8,42 @@
     <changeSet id="add-data-author" author="poltoraha_pivka">
         <insert tableName="AUTHOR">
             <column name="full_name" value="Пастернак Борис Леонидович"/>
-            <column name="id" value="1"/>
             <column name="avg_rating" value="5.0"/>
         </insert>
         <insert tableName="AUTHOR">
             <column name="full_name" value="Лев Николаевич Толстой"/>
-            <column name="id" value="2"/>
             <column name="avg_rating" value="4.9"/>
         </insert>
         <insert tableName="AUTHOR">
             <column name="full_name" value="Фёдор Михайлович Достоевский"/>
-            <column name="id" value="3"/>
             <column name="avg_rating" value="4.8"/>
         </insert>
         <insert tableName="AUTHOR">
             <column name="full_name" value="Путин Боря Леонидыч"/>
-            <column name="id" value="4"/>
             <column name="avg_rating" value="4.7"/>
         </insert>
         <insert tableName="AUTHOR">
             <column name="full_name" value="Маршак Самуил Яковлевич"/>
-            <column name="id" value="5"/>
             <column name="avg_rating" value="4.6"/>
         </insert>
         <insert tableName="AUTHOR">
             <column name="full_name" value="Свидригайлов Валерий Олегович"/>
-            <column name="id" value="6"/>
             <column name="avg_rating" value="4.5"/>
         </insert>
         <insert tableName="AUTHOR">
             <column name="full_name" value="Бессмертный Джо"/>
-            <column name="id" value="7"/>
             <column name="avg_rating" value="4.4"/>
         </insert>
         <insert tableName="AUTHOR">
             <column name="full_name" value="Сладкий писик"/>
-            <column name="id" value="8"/>
             <column name="avg_rating" value="4.3"/>
         </insert>
         <insert tableName="AUTHOR">
             <column name="full_name" value="Тихомиров Максим Дмитриевич"/>
-            <column name="id" value="9"/>
             <column name="avg_rating" value="4.2"/>
         </insert>
         <insert tableName="AUTHOR">
             <column name="full_name" value="Мирон Фёдоров"/>
-            <column name="id" value="10"/>
             <column name="avg_rating" value="3.0"/>
         </insert>
     </changeSet>
