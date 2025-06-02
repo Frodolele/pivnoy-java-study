@@ -1,6 +1,11 @@
 logging:
   level:
     org.apache.kafka: WARN  # Уровень логирования для Kafka
+    ttv.poltoraha.pivka: DEBUG
+  pattern:
+    console: %d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n
+
+
 
 spring:
   application:
