@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ООО СК "МЕРЕДИАН" - Строительная компания</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1a5276;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .slogan {
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        nav {
+            background-color: #2874a6;
+            padding: 15px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1487958449943-2429e8be8625');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #e67e22;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #d35400;
+        }
+
+        section {
+            padding: 50px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+            color: #1a5276;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .service {
+            flex-basis: 30%;
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .service img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .projects {
+            background-color: #f9f9f9;
+        }
+
+        .project-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .project {
+            flex-basis: 48%;
+            margin-bottom: 30px;
+        }
+
+        .project img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .form-group textarea {
+            height: 150px;
+        }
+
+        footer {
+            background-color: #1a5276;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .footer-contacts {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .service {
+                flex-basis: 100%;
+            }
+
+            .project {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">ООО СК "МЕРЕДИАН"</div>
+    <div class="slogan">Строим будущее вместе</div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#about">О компании</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#projects">Проекты</a></li>
+        <li><a href="#contact">Контакты</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <h1>Профессиональное строительство под ключ</h1>
+    <p>Качество, надежность и соблюдение сроков - наши главные принципы</p>
+    <a href="#contact" class="btn">Оставить заявку</a>
+</section>
+
+<section id="about">
+    <h2 class="section-title">О компании</h2>
+    <p>ООО СК "МЕРЕДИАН" - это современная строительная компания, которая уже более 10 лет успешно реализует проекты различной сложности. Наша команда профессионалов гарантирует качественное выполнение работ на всех этапах строительства.</p>
+    <p>Мы специализируемся на строительстве жилых и коммерческих объектов, реконструкции зданий и капитальном ремонте. Наши клиенты - это частные лица, крупные компании и государственные учреждения.</p>
+</section>
+
+<section id="services">
+    <h2 class="section-title">Наши услуги</h2>
+    <div class="services">
+        <div class="service">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Строительство домов">
+            <h3>Строительство домов</h3>
+            <p>Полный цикл строительства частных домов и коттеджей под ключ с использованием современных материалов и технологий.</p>
+        </div>
+        <div class="service">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab" alt="Коммерческое строительство">
+            <h3>Коммерческое строительство</h3>
+            <p>Возведение офисных зданий, торговых центров, складов и других коммерческих объектов любой сложности.</p>
+        </div>
+        <div class="service">
+            <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea" alt="Реконструкция и ремонт">
+            <h3>Реконструкция и ремонт</h3>
+            <p>Качественная реконструкция зданий, капитальный и косметический ремонт помещений любого назначения.</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="projects">
+    <h2 class="section-title">Наши проекты</h2>
+    <div class="project-gallery">
+        <div class="project">
+            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914" alt="Жилой комплекс">
+            <h3>Жилой комплекс "Северный"</h3>
+            <p>Строительство 5-этажного жилого комплекса общей площадью 12 000 кв.м.</p>
+        </div>
+        <div class="project">
+            <img src="https://images.unsplash.com/photo-1497366754035-f198968f5359" alt="Офисное здание">
+            <h3>Офисное здание "Бизнес-Парк"</h3>
+            <p>Строительство 7-этажного офисного центра класса А площадью 8 500 кв.м.</p>
+        </div>
+        <div class="project">
+            <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6" alt="Частный коттедж">
+            <h3>Частный коттедж в поселке "Зеленый бор"</h3>
+            <p>Строительство двухэтажного коттеджа площадью 350 кв.м. с бассейном и гаражом.</p>
+        </div>
+        <div class="project">
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d" alt="Торговый центр">
+            <h3>Торговый центр "Меридиан"</h3>
+            <p>Строительство торгово-развлекательного центра общей площадью 25 000 кв.м.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Свяжитесь с нами</h2>
+    <div class="contact-form">
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Ваше имя</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Сообщение</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn">Отправить заявку</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-contacts">
+        <p>ООО СК "МЕРЕДИАН"</p>
+        <p>Адрес: г. Москва, ул. Строителей, д. 45, офис 12</p>
+        <p>Телефон: +7 (495) 123-45-67</p>
+        <p>Email: info@meredian-stroy.ru</p>
+    </div>
+    <p>&copy; 2023 ООО СК "МЕРЕДИАН". Все права защищены.</p>
+</footer>
+</body>
+</html>

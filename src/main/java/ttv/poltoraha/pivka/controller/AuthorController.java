@@ -2,6 +2,7 @@ package ttv.poltoraha.pivka.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+import ttv.poltoraha.pivka.dao.dto.AuthorDto;
 import ttv.poltoraha.pivka.entity.Author;
 import ttv.poltoraha.pivka.entity.Book;
 import ttv.poltoraha.pivka.service.AuthorService;
@@ -17,8 +18,8 @@ public class AuthorController {
     private final AuthorService authorService;
 
     @PostMapping("/create")
-    public void createAuthor(@RequestBody Author author) {
-        authorService.create(author);
+    public void createAuthor(@RequestBody AuthorDto authorDto) {
+        authorService.create(authorDto);
     }
 
     @PostMapping("/delete")
